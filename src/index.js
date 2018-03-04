@@ -4,6 +4,13 @@ class AuthenticationPane extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {};
+    }
+
+    componentDidMount() {
+    }
+
+    componentWillUnmount() {
     }
 
     render() {
@@ -26,6 +33,7 @@ class AuthenticationForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {email: '', password: ''};
+
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSignUp = this.handleSignUp.bind(this);
@@ -43,17 +51,20 @@ class AuthenticationForm extends React.Component {
 
     handleSignUp(event) {
         alert('Signing Up with: ' + JSON.stringify(this.state));
-        event.preventDefault();
     }
 
     handleLogIn(event) {
         alert('Logging In with: ' + JSON.stringify(this.state));
-        event.preventDefault();
     }
 
     handleForgotPassword(event) {
         alert('Forgot Password with: ' + JSON.stringify(this.state));
-        event.preventDefault();
+    }
+
+    componentDidMount() {
+    }
+
+    componentWillUnmount() {
     }
 
     render() {
